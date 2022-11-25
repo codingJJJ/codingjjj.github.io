@@ -15,6 +15,11 @@
       type: 'AcFormNext'
     })
     })
+    window.addEventListener('message', (e) => {
+      if(e?.data?.type === 'AcFormNext') {
+        console.log(e)
+      }
+    })
   </script>
 </body>
 </html>
