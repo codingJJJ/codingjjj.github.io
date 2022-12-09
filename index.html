@@ -7,21 +7,5 @@
   <title>Document</title>
 </head>
 <body>
-  <button id="test">all Next</button>
-  <script>
-    document.getElementById('test').addEventListener('click', () => {
-      console.log(window.parent)
-      console.log( window.parent.parent ===  window.parent)
-      console.log('click')
-      window.parent.parent.postMessage({
-      type: 'AcFormNext'
-    }, '*')
-    })
-    window.addEventListener('message', (e) => {
-      if(e?.data?.type === 'AcFormNext') {
-        console.log(e)
-      }
-    })
-  </script>
 </body>
 </html>
